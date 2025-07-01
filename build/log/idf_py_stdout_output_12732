@@ -1,0 +1,183 @@
+[1/18] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D G:\HCMUT\HK232\Internship-Exp\General-Project\Bluetooth_POC\Code_bluetooth_esp32s3\build\bootloader\esp-idf\esptool_py && D:\Softwaves\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/build/bootloader/bootloader.bin"
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+[2/16] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/button/gpio.h:13,
+                 from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:39,
+                 from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.c:1:
+D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:42:13: warning: 'PATH_FILE' defined but not used [-Wunused-variable]
+   42 | static char PATH_FILE[100];
+      |             ^~~~~~~~~
+In file included from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:36:
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/rfid_module/rfid_module.h:16:21: warning: 'event' defined but not used [-Wunused-variable]
+   16 | static uart_event_t event;
+      |                     ^~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/rfid_module/rfid_module.h:15:22: warning: 'uart1_queue' defined but not used [-Wunused-variable]
+   15 | static QueueHandle_t uart1_queue = NULL;
+      |                      ^~~~~~~~~~~
+[3/16] Building C object esp-idf/rfid_module/CMakeFiles/__idf_rfid_module.dir/rfid_module.c.obj
+In file included from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/button/gpio.h:13,
+                 from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:39,
+                 from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/rfid_module/rfid_module.c:3:
+D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:42:13: warning: 'PATH_FILE' defined but not used [-Wunused-variable]
+   42 | static char PATH_FILE[100];
+      |             ^~~~~~~~~
+In file included from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/rfid_module/rfid_module.c:2:
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/rfid_module/rfid_module.h:16:21: warning: 'event' defined but not used [-Wunused-variable]
+   16 | static uart_event_t event;
+      |                     ^~~~~
+[4/16] Building C object esp-idf/button/CMakeFiles/__idf_button.dir/gpio.c.obj
+In file included from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/button/gpio.h:13,
+                 from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:39,
+                 from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/button/gpio.c:1:
+D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/button/gpio.c: In function 'gpio_read_task':
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/button/gpio.c:37:16: warning: unused variable 'last_config_state' [-Wunused-variable]
+   37 |     static int last_config_state = -1;
+      |                ^~~~~~~~~~~~~~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/button/gpio.c:36:16: warning: unused variable 'last_operation_state' [-Wunused-variable]
+   36 |     static int last_operation_state = -1;
+      |                ^~~~~~~~~~~~~~~~~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/button/gpio.c:35:16: warning: unused variable 'last_stop_time' [-Wunused-variable]
+   35 |     static int last_stop_time = 0;
+      |                ^~~~~~~~~~~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h: At top level:
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:42:13: warning: 'PATH_FILE' defined but not used [-Wunused-variable]
+   42 | static char PATH_FILE[100];
+      |             ^~~~~~~~~
+In file included from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:36:
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/rfid_module/rfid_module.h:16:21: warning: 'event' defined but not used [-Wunused-variable]
+   16 | static uart_event_t event;
+      |                     ^~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/rfid_module/rfid_module.h:15:22: warning: 'uart1_queue' defined but not used [-Wunused-variable]
+   15 | static QueueHandle_t uart1_queue = NULL;
+      |                      ^~~~~~~~~~~
+[5/16] Building C object esp-idf/flash/CMakeFiles/__idf_flash.dir/flash.c.obj
+In file included from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/button/gpio.h:13,
+                 from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:39,
+                 from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/flash/flash.c:3:
+D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:42:13: warning: 'PATH_FILE' defined but not used [-Wunused-variable]
+   42 | static char PATH_FILE[100];
+      |             ^~~~~~~~~
+In file included from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:36:
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/rfid_module/rfid_module.h:16:21: warning: 'event' defined but not used [-Wunused-variable]
+   16 | static uart_event_t event;
+      |                     ^~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/rfid_module/rfid_module.h:15:22: warning: 'uart1_queue' defined but not used [-Wunused-variable]
+   15 | static QueueHandle_t uart1_queue = NULL;
+      |                      ^~~~~~~~~~~
+[6/16] Linking C static library esp-idf\main\libmain.a
+[7/16] Linking C static library esp-idf\button\libbutton.a
+[8/16] Linking C static library esp-idf\rfid_module\librfid_module.a
+[9/16] Building C object esp-idf/ble/CMakeFiles/__idf_ble.dir/ble.c.obj
+In file included from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/button/gpio.h:13,
+                 from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:39,
+                 from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/ble/ble.c:2:
+D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/ble/ble.c: In function 'gatts_event_handler':
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/ble/ble.c:154:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  154 |     if (param->add_attr_tab.status == ESP_GATT_OK) {
+      |        ^
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/ble/ble.c:164:5: note: here
+  164 |     case ESP_GATTS_CONNECT_EVT:
+      |     ^~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/ble/ble.c: At top level:
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/ble/ble.c:54:25: warning: 'char_val' defined but not used [-Wunused-variable]
+   54 | static esp_attr_value_t char_val = {
+      |                         ^~~~~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:42:13: warning: 'PATH_FILE' defined but not used [-Wunused-variable]
+   42 | static char PATH_FILE[100];
+      |             ^~~~~~~~~
+In file included from G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/main/main.h:36:
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/rfid_module/rfid_module.h:16:21: warning: 'event' defined but not used [-Wunused-variable]
+   16 | static uart_event_t event;
+      |                     ^~~~~
+G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/rfid_module/rfid_module.h:15:22: warning: 'uart1_queue' defined but not used [-Wunused-variable]
+   15 | static QueueHandle_t uart1_queue = NULL;
+      |                      ^~~~~~~~~~~
+[10/16] Linking C static library esp-idf\ble\libble.a
+[11/16] Linking C static library esp-idf\flash\libflash.a
+[12/16] Generating ld/sections.ld
+[13/16] Linking CXX executable gatt_server_demos.elf
+[14/16] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/build/gatt_server_demos.bin
+[15/16] cmd.exe /C "cd /D G:\HCMUT\HK232\Internship-Exp\General-Project\Bluetooth_POC\Code_bluetooth_esp32s3\build\esp-idf\esptool_py && D:\Softwaves\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/build/partition_table/partition-table.bin G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/build/gatt_server_demos.bin"
+gatt_server_demos.bin binary size 0xbebc0 bytes. Smallest app partition is 0x100000 bytes. 0x41440 bytes (25%) free.
+[15/16] cmd.exe /C "cd /D D:\Softwaves\Espressif\frameworks\esp-idf-v5.3.1\components\esptool_py && D:\Softwaves\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=D:/Softwaves/Espressif/fresptool.py --chip esp32s3 -p COM10 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 gatt_server_demos.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM10
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE
+Crystal is 40MHz
+MAC: 30:30:f9:2b:82:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000cefff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21088 bytes to 13053...
+Writing at 0x00000000... (100 %)
+Wrote 21088 bytes (13053 compressed) at 0x00000000 in 0.5 seconds (effective 369.2 kbit/s)...
+Hash of data verified.
+Compressed 781248 bytes to 443859...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001ed46... (7 %)
+Writing at 0x0002cb22... (10 %)
+Writing at 0x00037f95... (14 %)
+Writing at 0x0003dc25... (17 %)
+Writing at 0x00043bfa... (21 %)
+Writing at 0x00049d83... (25 %)
+Writing at 0x0005042e... (28 %)
+Writing at 0x0005662f... (32 %)
+Writing at 0x0005c377... (35 %)
+Writing at 0x000620f3... (39 %)
+Writing at 0x00067efe... (42 %)
+Writing at 0x0006ea50... (46 %)
+Writing at 0x0007488a... (50 %)
+Writing at 0x0007aded... (53 %)
+Writing at 0x00080f0e... (57 %)
+Writing at 0x00086c44... (60 %)
+Writing at 0x0008ceba... (64 %)
+Writing at 0x0009271c... (67 %)
+Writing at 0x000980a5... (71 %)
+Writing at 0x0009e673... (75 %)
+Writing at 0x000a41a0... (78 %)
+Writing at 0x000a9895... (82 %)
+Writing at 0x000b07db... (85 %)
+Writing at 0x000b9cd1... (89 %)
+Writing at 0x000c172e... (92 %)
+Writing at 0x000c7883... (96 %)
+Writing at 0x000ce17f... (100 %)
+Wrote 781248 bytes (443859 compressed) at 0x00010000 in 6.6 seconds (effective 944.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 651.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+ameworks/esp-idf-v5.3.1 -D SERIAL_TOOL=D:/Softwaves/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/build -P D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/esptool_py/run_serial_tool.cmake"

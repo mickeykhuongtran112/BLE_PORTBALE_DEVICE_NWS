@@ -1,0 +1,27 @@
+The system is: Windows - 10.0.19045 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: D:/Softwaves/Espressif/tools/esp-clang/16.0.1-fe4f10a809/esp-clang/bin/clang.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is Clang, found in "G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/ble/build/CMakeFiles/3.24.0/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: D:/Softwaves/Espressif/tools/esp-clang/16.0.1-fe4f10a809/esp-clang/bin/clang++.exe 
+Build flags: 
+Id flags: -c 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is Clang, found in "G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/ble/build/CMakeFiles/3.24.0/CompilerIdCXX/CMakeCXXCompilerId.o"
+

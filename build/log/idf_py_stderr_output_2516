@@ -1,0 +1,30 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM10 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM10 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x4037e236: esp_cpu_wait_for_intr at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x4205b54f: task_wdt_timeout_handling at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x4205b96c: task_wdt_isr at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x4037b091: _xt_lowint1 at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x42008700: uart_ll_get_txfifo_len at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/hal/esp32s3/include/hal/uart_ll.h:390
+ (inlined by) uart_tx_char at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_uart/src/uart_vfs.c:170
+0x420095cf: uart_write at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_uart/src/uart_vfs.c:223
+0x4200c7f5: esp_vfs_write at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/vfs/vfs.c:502 (discriminator 4)
+0x4206aaaa: write at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/syscalls/syswrite.c:11 (discriminator 1)
+0x4200c344: console_write at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/esp_vfs_console/vfs_console.c:67
+0x4200c7f5: esp_vfs_write at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/vfs/vfs.c:502 (discriminator 4)
+0x4206a3ca: __swrite at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:94
+0x42069909: __sflush_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:224
+0x4206995a: _fflush_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fflush.c:278
+0x42069f4d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x42075b1b: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x420754f9: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x4206a441: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x420812e1: esp_log_writev at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x40387129: esp_log_write at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x4200e319: reciever_rfid at G:/HCMUT/HK232/Internship-Exp/General-Project/Bluetooth_POC/Code_bluetooth_esp32s3/components/rfid_module/rfid_module.c:195 (discriminator 1)
+0x403813f5: vPortTaskWrapper at D:/Softwaves/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m
