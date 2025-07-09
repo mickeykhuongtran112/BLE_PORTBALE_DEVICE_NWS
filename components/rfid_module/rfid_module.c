@@ -2,6 +2,18 @@
 #include "rfid_module.h"
 #include "main.h"
 #include "flash.h"
+/* Đây là khai báo thư viện cho Semaphore để giải phóng - kiểm soát buffer */
+/* có thì hẳn xài còn không thì niêm phong */
+//#include "freertos/FreeRTOS.h"
+//#include "freertos/semphr.h"
+
+// Khai báo semaphore
+//SemaphoreHandle_t decode_mutex;
+
+/* Tag giả để kiểm tra tiến độ xử lý */
+//string FakeTag1 = "ABCD1234";
+//string FakeTag2 = "ABCD5678";
+
 uint8_t uart_rx_buffer[FRAME_BUFFER_SIZE];
 typedef struct
 {
@@ -81,6 +93,7 @@ void send_request_rfid(int index_Antenna)
     }
     printf("\n");
 }
+// Điều chỉnh antenna nhận thông tin //
 void set_power_rfid(int index_Antenna)
 {
     uint8_t buffer[] = {0xA0, 0x0D, 0xFF, 0x8A, 0x03, 0x01, 0x01, 0x00, 0x02, 0x00, 0x03, 0x00, 0x01, 0x01, 0xC1};
@@ -94,7 +107,7 @@ void set_power_rfid(int index_Antenna)
     }
     printf("\n");
 }
-
+// RFID nhận data //
 void reciever_rfid(void *arg)
 {
     size_t buffered_size;
@@ -231,7 +244,7 @@ void reciever_rfid(void *arg)
     free(dtmp);
     vTaskDelete(NULL);
 }
-
+// tính check_sum sử dụng thủ thuật cộng tất cả rồi bù 1//
 uint8_t calculate_checksum(uint8_t *frame, uint8_t length)
 {
     uint8_t checksum = 0;
@@ -412,6 +425,8 @@ void decode_frame(uint8_t *frame)
         }
     }
 }
+
+// thong bao + printf cho cac gia tri : Tag, epc_inventory và RSSI 
 void send_ble_tag_notification(const char *epc_buffer, uint8_t rssi)
 {
     char message[500];
@@ -423,6 +438,8 @@ void send_ble_tag_notification(const char *epc_buffer, uint8_t rssi)
 
     send_ble_notify(message);
 }
+
+// chọn chết 1 attenna thông qua send_request_rfid, điều chỉnh task inventory, delay 200/ 1 tick ( 1000ms) = 200 / 1000ms
 void inventory_task(void *arg)
 {
 
@@ -470,6 +487,8 @@ void set_power(uint8_t power)
     uart_write_bytes(UART_NUM, (const char *)command_frame, sizeof(command_frame));
     printf("Sent RF power command with power : %d dBm, checksum: (0x%02X)\n", power, command_frame[8]);
 }
+
+//set còi//
 void set_beep(bool beep_on)
 {
     if (beep_on)
@@ -486,6 +505,7 @@ void set_beep(bool beep_on)
     printf("set beep OK\n");
 }
 
+// điều chỉnh session
 void set_session(uint8_t session,uint8_t target )
 {
     uint8_t command_frame[8] = {
@@ -506,6 +526,8 @@ void set_session(uint8_t session,uint8_t target )
     printf("Set session and target command sent: session=%d\n", session);
     handle_cmd_SS(true);
 }
+
+// chỉnh mục tiêu 
 void set_target(uint8_t session,uint8_t target )
 {
     uint8_t command_frame[8] = {
@@ -526,6 +548,8 @@ void set_target(uint8_t session,uint8_t target )
     printf("Set session and target command sent: target=%d\n", target);
     handle_cmd_SS(true);
 }
+
+// set tần số cho 4 tần số thường xài, nếu k có báo lỗi
 void set_frequency(const char *region)
 {
     const uint8_t band_commands[4][8] = {
@@ -576,6 +600,7 @@ void set_target_session(void)
    
 }
 
+// điều chỉnh profile
 void set_rf_link(uint8_t profile)
 {
     if (profile > 3)
@@ -596,6 +621,20 @@ void set_rf_link(uint8_t profile)
     uart_write_bytes(UART_NUM, (const char *)command_frame, sizeof(command_frame));
     printf("Set RF link command sent for Profile %d\n", profile);
 }
+
+// tất cả các hàm dưới là chương trình con//
+//1. get power thông qua get_power
+//2. lấy RF link thông qua get_rf_link
+//3. lấy dải tần số thông qua get_frequency
+//4. get freq từ qua VM-64, thực ra nó là cái 3. mà do nhìn nhầm lười chỉnh
+//5. lấy ID thông qua handle ... DI
+//6. lấy start - stop thông qua handle ... s(start) và handle ... x(stop)
+//7. đọc Tag ( handle T)
+//8. get freq - set freq kiểm tra thông qua handle ... SF và handle ... GF
+//9. lấy thông tin out của buzzer qua handle ... ZZ
+//10. lấy thông tin output của set session và set target thông qua handle ... SS và handle ST
+//11. lấy thông tin RF profile và set RF profile trong handle GRF và handle SRF
+// hàm khóa : kiểm tra trạng thái gửi của cái 11. thông qua SST và GST
 
 void get_power(void)
 {
