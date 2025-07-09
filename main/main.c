@@ -17,6 +17,13 @@ bool ble_device_connected = false;
 uint8_t session = 0x00;
 uint8_t target = 0x00;
 
+
+// Kiểm tra tuần tự như sau: //
+// ESP Check lỗi //
+// UART Config bên RFID module //
+// Điều chỉnh I/O // 
+// Điều chỉnh BLE //
+// Tạo 1 task? thông qua xTaskCreatePinnedToCore //
 void app_main(void)
 {
     ESP_ERROR_CHECK(nvs_flash_init());
@@ -54,7 +61,7 @@ void app_main(void)
         recieverRfidTaskHandle = NULL;
     }
 
-    set_beep(false);
+    set_beep(false); // tránh việc chạy buzzer liên tục trong quá trình int main
     //send_request_rfid(1); // debug Temporary
 
     // while (1)
